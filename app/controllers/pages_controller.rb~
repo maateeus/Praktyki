@@ -1,0 +1,14 @@
+class PagesController < ApplicationController
+   def show
+    @p1 = P1.find(params[:id])
+  end
+  
+  
+  def home
+    @title="Home"
+  end
+ def newProject
+   @p1 = P1.find(params[:id])
+    @title="newProject"
+  end 
+end

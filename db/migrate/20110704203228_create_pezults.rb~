@@ -1,0 +1,15 @@
+class CreateProblemRezults < ActiveRecord::Migration
+  def self.up
+    create_table :problem_rezults do |t|
+      t.string :nazwa
+      t.string :opis
+      t.integer :problem_id
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :problem_rezults
+  end
+end

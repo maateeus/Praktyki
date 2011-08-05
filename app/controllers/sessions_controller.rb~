@@ -1,0 +1,10 @@
+﻿class SessionsController < ApplicationController
+  def new
+    @title="newProject"
+  end
+ def create
+   render 'new'
+  end
+   def destroy
+  end
+end

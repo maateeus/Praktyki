@@ -1,0 +1,17 @@
+ 
+ 
+<h1>Nowy Problem</h1>
+
+<%= form_for(@p1) do |f| %>
+
+  <div class="field">
+    <%= f.label :nazwa %><br />
+    <%= f.text_field :nazwa %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_field :opis %>
+  </div>
+
+
+<% end %>

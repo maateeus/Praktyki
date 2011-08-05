@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> <%= @title %></title>
+  </head>
+  <body>
+    <h1>Projecty</h1>
+    <p>
+
+
+
+<ul class="p1s">
+  <% @p1s.each do |p1| %>
+    <li>
+      <%= link_to p1.nazwa, p1 %>
+    </li>
+  <% end %>
+</ul>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<div class="<%=@wrapperClass%>" id="<%= @wrapperID%>">
+
+<h2>
+ <%= @header %>
+</h2>
+
+<p>
+<ul>
+
+  <% if !@p1s.nil? %>
+ <%@p1s.each do |p1|%>
+
+
+
+    <li>
+ <%= image_tag(p1.image,:size => @IconSize,  :alt => "Project", :class => "img") %>
+
+      Project: <%= link_to p1.nazwa, p1 %><br/>
+     Autor: <%=p1.opis%>
+    </li>
+
+
+
+
+  <% end %>
+<%end%>
+</ul>
+</p>
+</div>

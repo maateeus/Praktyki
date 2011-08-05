@@ -1,0 +1,34 @@
+ 
+<b>Nazwa:</b></br><%= @p1.nazwa %>,<b></br>Opis:</b></br> <%= @p1.opis %></br>
+<p>
+<%= link_to "edit", edit_p1_path(@p1) %>
+
+
+
+
+<%= link_to "delete", @p1, :method => :delete %>
+
+</p>
+<p><%= link_to "Add new problem ", new_problem_path(:id => @p1.id) %></p>
+
+<ul class="p1s">
+  <% @problems.each do |p1| %>
+    <li>
+      <%= link_to p1.nazwa, p1 %>
+    </li>
+  <% end %>
+</ul>
+
+
+ <strong>Problems</strong> <%= @p1.problems.count %>
+<p><%= link_to "Add new rezult ", new_rezult_path(:id => @p1.id) %></p>
+<ul>
+  <% @p1.rezults.each do |p1| %>
+    <li>
+      <%= link_to p1.nazwa, p1 %>
+    </li>
+  <% end %>
+</ul>
+
+ <strong>Rezults</strong> <%= @p1.rezults.count %>
+

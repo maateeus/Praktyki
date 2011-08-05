@@ -1,0 +1,12 @@
+class Relationship < ActiveRecord::Base
+  attr_accessible :problem_id, :subproblem_id
+  
+  
+  belongs_to :subproblem, :class_name => "Problem", :dependent => :destroy
+  belongs_to :problem, :class_name => "Problem" 
+  
+  
+  validates :subproblem_id, :presence => true
+  validates :problem_id, :presence => true
+  
+end

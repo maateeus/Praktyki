@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+<%= javascript_include_tag :defaults %>
+
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+  </head>
+  <body>
+
+    <div class="container">
+      <header>
+        <%= image_tag("rails.png", :alt => "Project", :class => "round") %>
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+	<li><%= link_to "Nowy Project", newProject_path %></li>
+
+          </ul>
+        </nav>
+      </header>
+<div class="sidebar">
+  <%= render_cell :project, :recent ,
+:ObjectList => P1.all,:wrapperID => 'wraper',:wrapperClass => "p1s",:header => "Top Five",:IconSize =>"80x80"
+     %>
+</div>
+      <section class="round">
+ <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+        <%= yield %>
+      </section>
+
+
+
+</div>
+    </div>
+  </body>
+</html>
+

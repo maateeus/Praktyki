@@ -1,0 +1,19 @@
+ 
+<h1>Edit Rezult</h1>
+
+<%= form_for(@problem_rezult) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :nazwa %><br />
+    <%= f.text_field :nazwa %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_field :opis %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+

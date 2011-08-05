@@ -1,0 +1,12 @@
+ 
+namespace :db do
+  desc "Fill database with sample data"
+  task :populate => :environment do
+  
+    P1.all(:limit => 6).each do |p1|
+      2.times do
+        p1.problems.create!(:nazwa => Faker::Lorem.sentence(5),:opis => Faker::Lorem.sentence(5))
+      end
+    end
+  end
+end

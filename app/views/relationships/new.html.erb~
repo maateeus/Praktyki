@@ -1,0 +1,20 @@
+ 
+ 
+<h1>add SubProblem</h1>
+
+<%= form_for @relationship do |f| %>
+<%= f.hidden_field :problem_id  %></br>
+  <div class="field">
+
+
+
+    <%= f.label :problem_id  %><br />
+    <%= f.text_field :problem_id  %>
+  </div>
+
+
+<div class="actions">
+    <%= f.submit "Dodaj Subproblem Problem" %>
+  </div>
+
+<% end %>
